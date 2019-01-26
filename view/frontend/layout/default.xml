@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * GiaPhuGroup Co., Ltd.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the GiaPhuGroup.com license that is
+ * available through the world-wide-web at this URL:
+ * https://www.giaphugroup.com/LICENSE.txt
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ *
+ * @category    PHPCuong
+ * @package     PHPCuong_TopMenu
+ * @copyright   Copyright (c) 2019-2020 GiaPhuGroup Co., Ltd. All rights reserved. (http://www.giaphugroup.com/)
+ * @license     https://www.giaphugroup.com/LICENSE.txt
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="catalog.topnav">
+            <action method="setTemplate">
+                <argument name="template" xsi:type="string">PHPCuong_TopMenu::html/topmenu.phtml</argument>
+            </action>
+            <block class="PHPCuong\TopMenu\Block\Html\CustomLink" as="topmenu-aboutus-link" name="topmenu.aboutus.link">
+                <arguments>
+                    <argument name="label" xsi:type="string">About Us</argument>
+                    <argument name="path" xsi:type="string">about-us</argument>
+                    <argument name="attributes" xsi:type="array">
+                        <item name="class" xsi:type="string">level-top ui-corner-all</item>
+                    </argument>
+                </arguments>
+            </block>
+            <block class="PHPCuong\TopMenu\Block\Html\CustomLink" name="topmenu.contact.link" as="topmenu-contact-link">
+                <block class="PHPCuong\TopMenu\Block\Html\CustomLink" name="topmenu.homepage.link" as="topmenu-homepage-link">
+                    <arguments>
+                        <argument name="label" xsi:type="string">Home</argument>
+                        <argument name="path" xsi:type="string">/</argument>
+                        <argument name="attributes" xsi:type="array">
+                            <item name="class" xsi:type="string">level-top ui-corner-all</item>
+                        </argument>
+                    </arguments>
+                </block>
+                <arguments>
+                    <argument name="label" xsi:type="string">Contact Us</argument>
+                    <argument name="path" xsi:type="string">contact</argument>
+                    <argument name="attributes" xsi:type="array">
+                        <item name="class" xsi:type="string">level-top ui-corner-all</item>
+                    </argument>
+                </arguments>
+            </block>
+       </referenceBlock>
+    </body>
+</page>
